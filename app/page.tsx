@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, Zap } from "lucide-react";
+import { Check, Zap, Info } from "lucide-react";
 
 const tiers = [
   {
@@ -12,7 +12,7 @@ const tiers = [
     popular: false,
   },
   {
-    name: "Starter",
+    name: "PokerAtlas Pro",
     originalName: "Practice",
     price: "$5.99",
     period: "/mo",
@@ -171,6 +171,23 @@ export default function PricingPage() {
             </button>
           </div>
         ))}
+      </div>
+
+      {/* PokerAtlas Pro Eligibility */}
+      <div className="max-w-3xl mx-auto mb-20">
+        <div className="bg-[#171a21] border border-gray-800 rounded-2xl p-6 flex items-start gap-4">
+          <div className="p-2.5 bg-blue-500/10 rounded-xl text-blue-400 shrink-0">
+            <Info className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-white mb-1">
+              PokerAtlas Pro plan
+            </h3>
+            <p className="text-sm text-gray-400">
+              The Starter / PokerAtlas Pro tier is only available to PokerAtlas Pro subscribers. You must have an active PokerAtlas Pro subscription to access this plan.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Energy Costs Info Box */}
