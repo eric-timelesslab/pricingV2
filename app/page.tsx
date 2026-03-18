@@ -17,12 +17,12 @@ const tiers = [
     price: "$5.99",
     period: "/mo",
     description: "Perfect for casual practice and learning.",
-    buttonText: "Subscribe to PokerAtlas Pro",
+    buttonText: "Go to PokerAtlas",
     buttonVariant: "outline",
     popular: false,
   },
   {
-    name: "Pro",
+    name: "Plus",
     originalName: "Practice unlimited",
     price: "$14.99",
     period: "/mo",
@@ -32,7 +32,7 @@ const tiers = [
     popular: true,
   },
   {
-    name: "Elite",
+    name: "Ultimate",
     originalName: "AI Coach",
     price: "$59.99",
     period: "/mo",
@@ -184,7 +184,7 @@ export default function PricingPage() {
               PokerAtlas Pro plan
             </h3>
             <p className="text-sm text-gray-400">
-              The PokerAtlas Pro tier is only available to PokerAtlas Pro subscribers. You must have an active PokerAtlas Pro subscription to access this plan.
+              The PokerAtlas Pro tier is only available to PokerAtlas Pro subscribers. This will not be visible to non-PokerAtlas Pro subscribers.
             </p>
           </div>
         </div>
