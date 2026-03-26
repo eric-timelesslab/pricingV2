@@ -4,7 +4,6 @@ import { Check, Zap, Info } from "lucide-react";
 const tiers = [
   {
     name: "Free",
-    originalName: "Free",
     price: "$0",
     description: "Basic features to get you started.",
     buttonText: "Start for Free",
@@ -12,18 +11,15 @@ const tiers = [
     popular: false,
   },
   {
-    name: "PokerAtlas Pro",
-    originalName: "PokerAtlas Pro",
-    price: "$5.99",
-    period: "/mo",
+    name: "Starter",
+    price: "$0",
     description: "Perfect for casual practice and learning.",
-    buttonText: "Go to PokerAtlas",
+    buttonText: "Get Starter",
     buttonVariant: "outline",
     popular: false,
   },
   {
-    name: "Plus",
-    originalName: "Practice unlimited",
+    name: "Pro",
     price: "$14.99",
     period: "/mo",
     description: "Unlimited practice for dedicated grinders.",
@@ -32,8 +28,7 @@ const tiers = [
     popular: true,
   },
   {
-    name: "Ultimate",
-    originalName: "AI Coach",
+    name: "Elite",
     price: "$59.99",
     period: "/mo",
     description: "Full AI coaching and unlimited reporting.",
@@ -57,28 +52,38 @@ const features = [
       },
       {
         name: "Range chart",
-        values: ["-", true, true, true],
+        values: ["None", true, true, true],
       },
       {
-        name: "Streak protect",
-        values: ["-", "3 / month", "3 / month", "3 / month"],
+        name: "Streak protection",
+        values: ["None", "3 / month", true, true],
       },
     ],
   },
   {
-    category: "AI Features",
+    category: "AI features",
     items: [
       {
         name: "Smart report",
-        values: ["2 lifetime", "2 lifetime", "3 / day", "Unlimited"],
+        values: [
+          "2 reports lifetime",
+          "1 report / day",
+          "3 reports / day",
+          "Unlimited",
+        ],
       },
       {
-        name: "AI coach thread",
-        values: ["1 / day", "1 / day", "Unlimited", "Unlimited"],
+        name: "AI coach messages",
+        values: ["10 / day", "10 / day", "Unlimited", "Unlimited"],
       },
       {
-        name: "AI Leak detection",
-        values: ["2 lifetime", "2 lifetime", "3 / month", "Unlimited"],
+        name: "AI Leak detection + practice",
+        values: [
+          "2 reports lifetime",
+          "1 report / month",
+          "3 reports / month",
+          "Unlimited",
+        ],
       },
     ],
   },
@@ -95,7 +100,7 @@ const features = [
       },
       {
         name: "Nash charts",
-        values: ["Basic", "Basic", true, true],
+        values: ["Basic", true, true, true],
       },
     ],
   },
@@ -173,18 +178,19 @@ export default function PricingPage() {
         ))}
       </div>
 
-      {/* PokerAtlas Pro Eligibility */}
+      {/* Starter tier included free */}
       <div className="max-w-3xl mx-auto mb-20">
         <div className="bg-[#171a21] border border-gray-800 rounded-2xl p-6 flex items-start gap-4">
-          <div className="p-2.5 bg-blue-500/10 rounded-xl text-blue-400 shrink-0">
+          <div className="p-2.5 bg-emerald-500/10 rounded-xl text-emerald-400 shrink-0">
             <Info className="w-6 h-6" />
           </div>
           <div>
             <h3 className="text-lg font-bold text-white mb-1">
-              PokerAtlas Pro plan
+              Starter is free
             </h3>
             <p className="text-sm text-gray-400">
-              The PokerAtlas Pro tier is only available to PokerAtlas Pro subscribers. This will not be visible to non-PokerAtlas Pro subscribers.
+              The Starter tier is included at no cost—no separate subscription
+              required.
             </p>
           </div>
         </div>
